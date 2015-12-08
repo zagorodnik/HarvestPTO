@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VacationHarvest", "VacationHarvest\VacationHarvest.csproj", "{6EBFB1E6-5A62-4DAA-8A30-D0D4D2E43501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VacationHarvestTests", "VacationHarvestTests\VacationHarvestTests.csproj", "{95D3D535-E30F-4210-A65B-1D30DB07BDF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EBFB1E6-5A62-4DAA-8A30-D0D4D2E43501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EBFB1E6-5A62-4DAA-8A30-D0D4D2E43501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EBFB1E6-5A62-4DAA-8A30-D0D4D2E43501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EBFB1E6-5A62-4DAA-8A30-D0D4D2E43501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D3D535-E30F-4210-A65B-1D30DB07BDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D3D535-E30F-4210-A65B-1D30DB07BDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D3D535-E30F-4210-A65B-1D30DB07BDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D3D535-E30F-4210-A65B-1D30DB07BDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

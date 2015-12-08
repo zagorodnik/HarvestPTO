@@ -1,0 +1,271 @@
+﻿html,
+body,
+form,
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.content-wrapper {
+  padding: 60px;
+}
+.flt-right {
+  float: right;
+}
+.flt-left {
+  float: left;
+}
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+  font-size: 0;
+}
+.pto-container {
+  border: 1px solid #dcecf9;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 12px;
+  color: #808080;
+  height: 100%;
+  position: relative;
+}
+.pto-container .pto-header-container header {
+  background-color: #dcecf9;
+  padding: 5px 20px;
+  height: 88px;
+  color: #333333;
+}
+.pto-container .pto-header-container header section {
+  margin: 10px 0;
+}
+.pto-container .pto-header-container header .main {
+  font-size: 20px;
+}
+.pto-container .pto-header-container header a {
+  color: inherit;
+}
+.pto-container .pto-grid-container {
+  height: -moz-calc(100% -  88px);
+  height: -webkit-calc(100% -  88px);
+  height: calc(100% -  88px);
+}
+.pto-container .pto-grid-container .pto-panel {
+  height: 100%;
+}
+.pto-container .pto-grid-container .pto-panel .content {
+  height: -moz-calc(100% -  52px);
+  height: -webkit-calc(100% -  52px);
+  height: calc(100% -  52px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.pto-container .pto-grid-container header {
+  background-color: #f4f9fd;
+  padding: 5px 0;
+  height: 52px;
+  color: #5c5c5c;
+}
+.pto-container .pto-grid-container header .column {
+  padding: 12px 20px;
+  position: relative;
+  line-height: 18px;
+  font-size: 13px;
+}
+.pto-container .pto-grid-container header .column.separator:before {
+  display: block;
+  width: 1px;
+  height: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #dcecf9;
+}
+.pto-container .pto-grid-container .pto-grid {
+  width: 60%;
+}
+.pto-container .pto-grid-container .pto-grid table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.pto-container .pto-grid-container .pto-grid table .hours-column {
+  text-align: center;
+}
+.pto-container .pto-grid-container .pto-grid table tr {
+  background-color: #ffffff;
+}
+.pto-container .pto-grid-container .pto-grid table tr.prev-year {
+  background-color: #f4f9fd;
+}
+.pto-container .pto-grid-container .pto-grid table tr:hover {
+  background-color: #dcecf9;
+}
+.pto-container .pto-grid-container .pto-grid table tr:hover .column:first-child:before {
+  display: block;
+  width: 2px;
+  height: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0170c9;
+}
+.pto-container .pto-grid-container .pto-grid table tr.vacation {
+  background-color: #0170c9;
+  color: #ffffff;
+}
+.pto-container .pto-grid-container .pto-grid table tr.vacation .higthligth {
+  color: #ffffff;
+}
+.pto-container .pto-grid-container .pto-grid table tr.sick-leave {
+  background-color: #dcecf9;
+}
+.pto-container .pto-grid-container .pto-grid table tr.unpaid {
+  background-color: #fedada;
+  color: #c03230;
+}
+.pto-container .pto-grid-container .pto-grid table tr.unpaid .higthligth {
+  color: #c03230;
+}
+.pto-container .pto-grid-container .pto-grid table tr .column {
+  padding: 3px 20px;
+  position: relative;
+}
+.pto-container .pto-grid-container .pto-grid .date-column {
+  width: 19%;
+}
+.pto-container .pto-grid-container .pto-grid .hours-column {
+  width: 11%;
+}
+.pto-container .pto-grid-container .pto-grid .comment-column {
+  width: 40%;
+}
+.pto-container .pto-grid-container .pto-grid header .column a {
+  color: inherit;
+  cursor: pointer;
+}
+.pto-container .pto-grid-container .pto-grid header .sortorder {
+  display: inline-block;
+  margin-left: 2px;
+  width: 12px;
+  height: 12px;
+  background: transparent url("Images/arrow_black_down.png") no-repeat 0 5px;
+}
+.pto-container .pto-grid-container .pto-grid header .sortorder.reverse {
+  background-image: url("Images/arrow_black_up.png");
+}
+.pto-container .pto-grid-container .pto-grid header .filter {
+  position: relative;
+}
+.pto-container .pto-grid-container .pto-grid header .filter .options-container {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: -21px;
+  padding-top: 34px;
+  z-index: 999;
+}
+.pto-container .pto-grid-container .pto-grid header .filter ul.options {
+  top: 35px;
+  right: -21px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  width: 110px;
+  list-style-type: none;
+  padding: 0;
+  display: block;
+}
+.pto-container .pto-grid-container .pto-grid header .filter ul.options li {
+  display: block;
+  padding: 4px 2px 4px 12px;
+  margin: 2px 0 8px 0;
+}
+.pto-container .pto-grid-container .pto-grid header .filter ul.options li:last-child {
+  margin-bottom: 2px;
+}
+.pto-container .pto-grid-container .pto-grid header .filter ul.options li label {
+  font-weight: normal;
+  margin: 0;
+}
+.pto-container .pto-grid-container .pto-grid header .filter ul.options li label input[type="checkbox"] {
+  margin: 0;
+  position: relative;
+  top: 2px;
+}
+.pto-container .pto-grid-container .pto-grid header .filter ul.options li:hover {
+  padding-left: 10px;
+  border-left: 2px solid #0170c9;
+  background-color: #dcecf9;
+}
+.pto-container .pto-grid-container .pto-grid header .filter:hover .options-container {
+  display: block;
+}
+.pto-container .pto-grid-container .pto-hints {
+  width: 40%;
+}
+.pto-container .pto-grid-container .pto-hints .content {
+  padding: 0 20px;
+}
+.pto-container .pto-grid-container .pto-hints .content .main {
+  text-align: center;
+}
+.pto-container .pto-grid-container .pto-hints .content p {
+  margin: 20px 0;
+}
+.pto-container .pto-grid-container .btn-container a {
+  color: inherit;
+  cursor: pointer;
+}
+.pto-container .pto-grid-container .btn-container .hide-button-icon {
+  display: inline-block;
+  margin-left: 2px;
+  width: 7px;
+  height: 12px;
+  position: relative;
+  top: 2px;
+  background: transparent url("Images/arrow_blue_right.png") no-repeat 0 0;
+}
+.pto-container .pto-grid-container .btn-container .show-button-icon {
+  display: inline-block;
+  margin-right: 2px;
+  width: 7px;
+  height: 12px;
+  position: relative;
+  top: 2px;
+  background: transparent url("Images/arrow_blue_left.png") no-repeat 0 0;
+}
+.pto-container .pto-grid-container.maximized .pto-grid {
+  width: 100%;
+}
+.pto-container .pto-grid-container.maximized .pto-hints {
+  display: none;
+}
+.pto-container .loading-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.pto-container .loading-container .loading,
+.pto-container .loading-container .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.pto-container .loading-container .loading {
+  background: transparent url("Images/loading.gif") no-repeat center center;
+}
+.pto-container .loading-container .overlay {
+  background-color: #ffffff;
+  opacity: 0.4;
+}
+.higthligth {
+  color: #0170c9;
+}
+.pto-container .pto-grid-container .pto-grid header .higthligth .sortorder {
+  background-image: url("Images/arrow_blue_down.png");
+}
+.pto-container .pto-grid-container .pto-grid header .higthligth .sortorder.reverse {
+  background-image: url("Images/arrow_blue_up.png");
+}
+/*# sourceMappingURL=Site.css.map */

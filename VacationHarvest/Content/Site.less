@@ -1,0 +1,360 @@
+﻿@color-blue: #0170C9;
+@color-ligthblue: #DCECF9;
+@color-red: #C03230;
+@color-ligthred: #FEDADA;
+@color-white: #FFFFFF;
+@color-gray: #F4F9FD;
+@color-darkgray: #EEEEEE;
+
+@color-content-text: #808080;
+@color-header-text: #5c5c5c;
+@color-main-header-text: #333333;
+
+@pto-header-height: 88px;
+@pto-grid-header-height: 52px;
+@pto-content-padding: 20px;
+
+.calc-remaining-heigth(@val) {
+	height: -moz-calc(~"100% - "@val);
+	height: -webkit-calc(~"100% - "@val);
+	height: calc(~"100% - "@val);
+}
+
+html,
+body,
+form,
+.content-wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+.content-wrapper {
+	padding: 60px;
+}
+
+.flt-right {
+	float: right;
+}
+
+.flt-left {
+	float: left;
+}
+
+
+.clearfix:after {
+	clear: both;
+	content: '';
+	display: block;
+	font-size: 0;
+}
+
+.pto-container {
+	border: 1px solid @color-ligthblue;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-size: 12px;
+	color: @color-content-text;
+	height: 100%;
+	position: relative;
+
+	.pto-header-container {
+		header {
+			background-color: @color-ligthblue;
+			padding: 5px @pto-content-padding;
+			height: @pto-header-height;
+			color: @color-main-header-text;
+
+			section {
+				margin: 10px 0;
+			}
+
+			.main {
+				font-size: 20px;
+			}
+
+			a {
+				color: inherit;
+			}
+		}
+	}
+
+	.pto-grid-container {
+		.calc-remaining-heigth(@pto-header-height);
+
+		.pto-panel {
+			height: 100%;
+
+			.content {
+				.calc-remaining-heigth(@pto-grid-header-height);
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+		}
+
+		header {
+			background-color: @color-gray;
+			padding: 5px 0;
+			height: @pto-grid-header-height;
+			color: @color-header-text;
+
+			.column {
+				padding: 12px @pto-content-padding;
+				position: relative;
+				line-height: 18px;
+				font-size: 13px;
+
+				&.separator:before {
+					display: block;
+					width: 1px;
+					height: 100%;
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: @color-ligthblue;
+				}
+			}
+		}
+
+		.pto-grid {
+			width: 60%;
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+
+				.hours-column {
+					text-align: center;
+				}
+
+				tr {
+					background-color: @color-white;
+
+					&.prev-year {
+						background-color: @color-gray;
+					}
+
+					&:hover {
+						background-color: @color-ligthblue;
+
+						.column:first-child:before {
+							display: block;
+							width: 2px;
+							height: 100%;
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							background-color: @color-blue;
+						}
+					}
+
+
+					&.vacation {
+						background-color: @color-blue;
+						color: @color-white;
+
+						.higthligth {
+							color: @color-white;
+						}
+					}
+
+					&.sick-leave {
+						background-color: @color-ligthblue;
+					}
+
+					&.unpaid {
+						background-color: @color-ligthred;
+						color: @color-red;
+
+						.higthligth {
+							color: @color-red;
+						}
+					}
+
+					.column {
+						padding: 3px @pto-content-padding;
+						position: relative;
+					}
+				}
+			}
+
+			.date-column {
+				width: 19%;
+			}
+
+			.hours-column {
+				width: 11%;
+			}
+
+			.comment-column {
+				width: 40%;
+			}
+
+			header {
+				.column {
+					a {
+						color: inherit;
+						cursor: pointer;
+					}
+				}
+
+				.sortorder {
+					display: inline-block;
+					margin-left: 2px;
+					width: 12px;
+					height: 12px;
+					background: transparent url("Images/arrow_black_down.png") no-repeat 0 5px;
+
+					&.reverse {
+						background-image: url("Images/arrow_black_up.png");
+					}
+				}
+
+
+				.filter {
+					position: relative;
+
+					.options-container {
+						position: absolute;
+						display: none;
+						top: 0;
+						right: -21px;
+						padding-top: 34px;
+						z-index: 999;
+					}
+
+					ul.options {
+						top: 35px;
+						right: -21px;
+						background-color: @color-white;
+						border: 1px solid @color-darkgray;
+						width: 110px;
+						list-style-type: none;
+						padding: 0;
+						display: block;
+
+						li {
+							display: block;
+							padding: 4px 2px 4px 12px;
+							margin: 2px 0 8px 0;
+
+							&:last-child {
+								margin-bottom: 2px;
+							}
+
+							label {
+								font-weight: normal;
+								margin: 0;
+
+								input[type="checkbox"] {
+									margin: 0;
+									position: relative;
+									top: 2px;
+								}
+							}
+
+							&:hover {
+								padding-left: 10px;
+								border-left: 2px solid @color-blue;
+								background-color: @color-ligthblue;
+							}
+						}
+					}
+
+					&:hover .options-container {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.pto-hints {
+			width: 40%;
+
+			.content {
+				padding: 0 @pto-content-padding;
+
+				.main {
+					text-align: center;
+				}
+
+				p {
+					margin: 20px 0;
+				}
+			}
+		}
+
+		.btn-container {
+			a {
+				color: inherit;
+				cursor: pointer;
+			}
+
+
+			.hide-button-icon {
+				display: inline-block;
+				margin-left: 2px;
+				width: 7px;
+				height: 12px;
+				position: relative;
+				top: 2px;
+				background: transparent url("Images/arrow_blue_right.png") no-repeat 0 0;
+			}
+
+			.show-button-icon {
+				display: inline-block;
+				margin-right: 2px;
+				width: 7px;
+				height: 12px;
+				position: relative;
+				top: 2px;
+				background: transparent url("Images/arrow_blue_left.png") no-repeat 0 0;
+			}
+		}
+
+		&.maximized {
+			.pto-grid {
+				width: 100%;
+			}
+
+			.pto-hints {
+				display: none;
+			}
+		}
+	}
+
+	.loading-container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+
+		.loading, .overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+		}
+
+		.loading {
+			background: transparent url("Images/loading.gif") no-repeat center center;
+		}
+
+		.overlay {
+			background-color: @color-white;
+			opacity: 0.4;
+		}
+	}
+}
+
+.higthligth {
+	color: @color-blue;
+}
+
+.pto-container .pto-grid-container .pto-grid header .higthligth .sortorder {
+ 		background-image: url("Images/arrow_blue_down.png");
+
+		&.reverse {
+			background-image: url("Images/arrow_blue_up.png");
+		}
+}
